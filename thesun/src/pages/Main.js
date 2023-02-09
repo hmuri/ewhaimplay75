@@ -20,6 +20,7 @@ const CenterBox = styled.div`
 const IconImg = styled.img`
     height: ${props => props.height}rem;
     margin-bottom: 3rem;
+    margin-left: ${props => props.left}rem;
 `
 
 const Text = styled.div`
@@ -35,15 +36,15 @@ const Text = styled.div`
 function Main() {
     const randomNum = Math.floor(Math.random() * 3);
     const textList = [
-        { 'id' : 0, imageUri: '/images/main-gun.png', text : '이건 단지, 지나가는 시기야.', height: '4' },
-        { 'id' : 1, imageUri: '/images/main-lamp.png', text : '난 언제나 고통스러워.\n그리고 피곤해.', height : '8' },
-        { 'id' : 2, imageUri: '/images/main-earring.png', text : '힘들어도, 삶은 계속 돼.' }
+        { 'id' : 0, imageUri: '/images/main-gun.png', text : '이건 단지, 지나가는 시기야.', height: '2' },
+        { 'id' : 1, imageUri: '/images/main-lamp.png', text : '난 언제나 고통스러워.\n그리고 피곤해.', height : '8', left: '1' },
+        { 'id' : 2, imageUri: '/images/main-earring.png', text : '힘들어도, 삶은 계속 돼.', height : '5'  }
     ];
 
   return (
     <Container>
         <CenterBox>
-            <IconImg src={textList[randomNum].imageUri} height={textList[randomNum].height}/>
+            <IconImg src={textList[randomNum].imageUri} height={textList[randomNum].height} left={textList[randomNum].left}/>
             <Text>“{textList[randomNum].text}”</Text>
         </CenterBox>
     </Container>

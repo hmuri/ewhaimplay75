@@ -1,7 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
-import Introduction from '../components/Player/Introduction.js';
+import Information from '../components/Ticket/Information.js';
+import Goods from '../components/Ticket/Goods.js';
+import Seats from '../components/Ticket/Seats.js';
+import Caution from '../components/Ticket/Caution.js';
 
 const Container = styled.div`
     width: 100%;
@@ -13,12 +16,15 @@ const Container = styled.div`
     align-items: center;
 `
 
-function Ticket({match}) {
+function Ticket() {
   return (
     <>
       <Container>
         <Routes>
-          <Route path="" element={<Introduction />}></Route>
+          <Route path="" element={<Information />}></Route>
+          <Route path="/goods" element={<Goods />}></Route>
+          <Route path="/seats" element={<Seats />}></Route>
+          <Route path="/notice" element={<Caution />}></Route>
         </Routes>
       </Container>
     </>

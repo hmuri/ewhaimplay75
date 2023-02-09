@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { React, useState } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -50,8 +50,7 @@ const TextBox = styled.div`
 `
 
 function Poster({id, title, imageUri, text}) {
-
-    const [isHovering, setIsHovering] = useState(0);
+  const [isHovering, setIsHovering] = useState(0);
 
   return (
     <Container>

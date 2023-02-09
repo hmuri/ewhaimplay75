@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -35,9 +35,9 @@ const Text = styled.div`
 function Main() {
     const randomNum = Math.floor(Math.random() * 3);
     const textList = [
-        { 'id' : 0, imageUri: '/images/main-gun.png', text : '고통스럽고 피곤해.\n난 정말 고통스럽고 피곤해, 엄마.', height: '4' },
-        { 'id' : 1, imageUri: '/images/main-lamp.png', text : '작은 태양이라고 불렀지.\n그 시절의 걔를 그렇게 불렀던 기억이 나.', height : '8' },
-        { 'id' : 2, imageUri: '/images/main-earring.png', text : '' }
+        { 'id' : 0, imageUri: '/images/main-gun.png', text : '이건 단지, 지나가는 시기야.', height: '4' },
+        { 'id' : 1, imageUri: '/images/main-lamp.png', text : '난 언제나 고통스러워.\n그리고 피곤해.', height : '8' },
+        { 'id' : 2, imageUri: '/images/main-earring.png', text : '힘들어도, 삶은 계속 돼.' }
     ];
 
   return (

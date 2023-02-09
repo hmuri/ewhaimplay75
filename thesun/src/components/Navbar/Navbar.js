@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import TableList from './TableList';
@@ -67,10 +67,6 @@ function Navbar({location}) {
             {
                 page : 'casting-board',
                 title : '캐스팅보드'
-            },
-            {
-                page : 'caution',
-                title : '주의사항'
             }]
         },
         {

@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Information from '../components/Thesun/Information.js';
-import Writer from '../components/Thesun/Director.js';
+import Writer from '../components/Thesun/Writer.js';
 import Director from '../components/Thesun/Director.js';
 import Castingboard from '../components/Thesun/Castingboard.js';
-import Caution from '../components/Thesun/Caution.js';
 
 const Container = styled.div`
     width: 100%;
@@ -17,7 +16,7 @@ const Container = styled.div`
     align-items: center;
 `
 
-function Thesun({match}) {
+function Thesun() {
   return (
     <>
       <Container>
@@ -25,8 +24,7 @@ function Thesun({match}) {
           <Route path="" element={<Information />}></Route>
           <Route path="/writer" element={<Writer />}></Route>
           <Route path="/director-says" element={<Director />}></Route>
-          <Route path="/casting-board" element={<Castingboard />}></Route>
-          <Route path="/caution" element={<Caution />}></Route>
+          <Route path="/casting-board/*" element={<Castingboard />}></Route>
         </Routes>
       </Container>
     </>

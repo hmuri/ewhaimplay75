@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Introduction from '../components/Player/Introduction.js';
@@ -14,7 +14,7 @@ const Container = styled.div`
     align-items: center;
 `
 
-function Player({match}) {
+function Player() {
   return (
     <>
       <Container>

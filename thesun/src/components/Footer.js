@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/images/Footer/implay-logo.png';
 import instagram from '../assets/images/Footer/footer-icon-instagram.png';

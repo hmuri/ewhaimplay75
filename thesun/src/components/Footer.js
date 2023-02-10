@@ -15,6 +15,10 @@ const Container = styled.div`
     position: fixed;
     bottom: 0;
     right: 0;
+
+    @media ${props => props.theme.mobile} {
+        display: none;
+    }
 `
 
 const LeftContainer = styled.div`
@@ -37,7 +41,6 @@ const LogoImage = styled.img`
 
 const LeftTopText = styled.div`
     font-size: 0.5rem;
-    font-family: 'Spoqa-Han-Sans';
     color: #ffffff;
     font-weight: 100;
     opacity: 0.7;
@@ -46,7 +49,6 @@ const LeftTopText = styled.div`
 
 const LeftBottomText = styled.div`
     font-size: 0.8rem;
-    font-family: 'Spoqa-Han-Sans';
     color: #ffffff;
     font-weight: 400;
     opacity: 0.9;
@@ -67,7 +69,6 @@ const MiddleContainer = styled.div`
 
 const MiddleTopText = styled.div`
     font-size: 0.8rem;
-    font-family: 'Spoqa-Han-Sans';
     color: #ffffff;
     margin-bottom: 1rem;
     font-weight: 400;
@@ -76,7 +77,6 @@ const MiddleTopText = styled.div`
 
 const MiddleBottomText = styled.div`
     font-size: 0.5rem;
-    font-family: 'Spoqa-Han-Sans';
     color: #ffffff;
     white-space: pre-wrap;
     font-weight: 100;
@@ -107,7 +107,6 @@ const SNSIcon = styled.img`
 
 const RightText = styled.div`
     font-size: 0.5rem;
-    font-family: 'Spoqa-Han-Sans';
     color: #ffffff;
     font-weight: 100;
     opacity: 0.7;
@@ -130,8 +129,8 @@ function Navbar() {
         </MiddleContainer>
         <RightContainer>
             <IconBox>
-            <SNSIcon src={instagram}/>
-            <SNSIcon src={twitter}/>
+            <SNSIcon src={instagram} onClick={() => window.open('https://www.instagram.com/ewha_implay/', "_blank")}/>
+            <SNSIcon src={twitter} onClick={() => window.open('https://twitter.com/ewha_implay', "_blank")}/>
             <SNSIcon src={kakaotalk}/>
             </IconBox>
             <RightText>상단의 카카오톡 아이콘을 누르면 문의 관련 오픈채팅방으로 연결됩니다.</RightText>

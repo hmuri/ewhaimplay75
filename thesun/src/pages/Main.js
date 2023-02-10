@@ -25,7 +25,6 @@ const IconImg = styled.img`
 
 const Text = styled.div`
     font-size: 1rem;
-    font-family: 'Spoqa-Han-Sans';
     font-weight: 100;
     color: #ffffff;
     text-align : center;

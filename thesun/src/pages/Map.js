@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Hall from '../assets/images/Map/hall.png';
+import KakaoMap from '../components/Map/KakaoMap.js';
 
 const Container = styled.div`
   width: 100%;
@@ -38,11 +39,11 @@ const UpperBox = styled.div`
   height: 40%;
 `
 
-const KakaoMap = styled.div`
-  width: 20rem;
-  height: 100%;
-  border: solid 1px white;
-`
+// const KakaoMap = styled.div`
+//   width: 20rem;
+//   height: 100%;
+//   border: solid 1px white;
+// `
 
 const HallImg = styled.img`
   height: 100%;

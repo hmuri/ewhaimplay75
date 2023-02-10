@@ -19,6 +19,10 @@ const Container = styled.div`
 
 const RightContainer = styled.div`
   width: 89%;
+  
+  @media ${props => props.theme.mobile} {
+    width: 100%;
+}
 `
 
 function App() {

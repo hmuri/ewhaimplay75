@@ -1,24 +1,51 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import Polygon from '../../assets/images/polygon.png';
 
 const TableContainer = styled(NavLink)`
     width: 100%;
     text-decoration: none;
+
+    @media ${props => props.theme.mobile} {
+      height: 2.5rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
 `
 
 const TableTitle = styled.div`
     width: 100%;
-    height: 7rem;
+    height: 6.5rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.1rem;
-    font-family: 'Spoqa-Han-Sans';
     font-weight: 700;
     color: ${props => props.isActive == true ? '#ffffff' : '#172F53'};
     background-color: ${props => props.isActive == true ? '#172F53' : '#ffffff'};
+
+    @media ${props => props.theme.mobile} {
+      height: 2.5rem;
+      background-color: #ffffff;
+      color: #172F53;
+      font-size: 1rem;
+      font-weight: ${props => props.isActive == true ? '700' : '400'};
+    }
+`
+
+const PolygonImg = styled.img`
+    display: none;
+
+    @media ${props => props.theme.mobile} {
+      display: ${props => props.isActive == true ? 'flex' : 'none'};
+      width: 0.6rem;
+      position: absolute;
+      bottom: 0;
+    }
 `
 
 const TableInsideConatiner = styled.div`
@@ -28,16 +55,24 @@ const TableInsideConatiner = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0.8rem 0;
+
+    @media ${props => props.theme.mobile} {
+      display: none;
+    }
 `
 
 const SmallElem = styled(NavLink)`
     font-size: 0.9rem;
-    font-family: 'Spoqa-Han-Sans';
     font-weight: ${props => props.isActive ? '700' : '400'};
     color: #ffffff;
     cursor: pointer;
     padding : 0.8rem;
     text-decoration: none;
+
+    @media ${props => props.theme.mobile} {
+      display: none;
+    }
 `
 
 function TableList({location, page, title, elements}) {
@@ -45,7 +80,8 @@ function TableList({location, page, title, elements}) {
   return (
     <TableContainer exact to={"/"+page}>
         <TableTitle isActive={location.includes(page)}>{title}</TableTitle>
-        <TableInsideConatiner isActive={location.includes(page)}>
+        <PolygonImg src={Polygon} isActive={location.includes(page)}/>
+        <TableInsideConatiner isActive={location.includes(page) && (location !== '/info-route')}>
         {elements.map((content) => (
             <SmallElem
               exact to = {"/"+page+"/"+content.page}

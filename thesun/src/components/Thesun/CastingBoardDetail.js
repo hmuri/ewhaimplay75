@@ -79,6 +79,7 @@ const ScriptBox = styled.div`
     font-weight: 100;
     color: #ffffff;
     margin-top: 2rem;
+    font-style: italic;
 `
 
 const BottomBox = styled.div`
@@ -89,6 +90,7 @@ const NameBox = styled.div`
     font-size: 1.5rem;
     font-weight: 700;
     color: #ffffff;
+    font-family: 'Pretendard';
 `
 
 const DetailBox = styled.div`
@@ -103,26 +105,26 @@ function Castingboard() {
       {
         nameEN:'pierre',
         nameKR: '피에르',
-        text: '\n누구에게나 일어나는 일이야.\n하지만 이제 다시 일어날 시간이야.',
-        detail: '니콜라의 아버지.\n안느를 떠나 소피아와 새 가정을 이루었다.\n늘 행복하기만 하던 삶이 니콜라로 인해 흔들린다.'
+        text: '\n누구에게나 일어나는 일이야.\n하지만 이제 다시 일어날 시간이야.\n',
+        detail: '니콜라의 아버지.\n안느를 떠나 소피아와 새 가정을 이루었다.\n늘 명백하기만 하던 삶이 니콜라로 인해 흔들린다.'
       },
       {
         nameEN:'nicolas',
         nameKR: '니콜라',
-        text: '\n니콜라의 대사를 기다리고 있어요.',
-        detail: '니콜라 설명 자리예요.\n아마 세 줄 정도 들어갈 거예요.\n블라블라'
+        text: '\n결국 나를 위한 자리가 없어.\n가끔, 난 살기 위해 만들어지지 않은 것 같아.\n',
+        detail: '어두우 시기를 살아가는 아이.\n어느 순간부터 고통에 갇혀\n삶의 모든 것이 의미 없게만 느껴진다.'
       },
       {
         nameEN:'anne',
         nameKR: '안느',
-        text: '\n안느의 대사를 기다리고 있어요.',
-        detail: '안느 설명 자리예요.\n아마 세 줄 정도 들어갈 거예요.\n블라블라'
+        text: '\n그 시절에 내가 걔를 그렇게 불렀던 기억이 나.\n\'내 작은 태양\'이라고.\n',
+        detail: '니콜라의 어머니.\n사랑하는 것들이 자꾸만 자신을 떠나가는 것 같아 두렵다.'
       },
       {
         nameEN:'sopia',
         nameKR: '소피아',
-        text: '\n소피아의 대사를 기다리고 있어요.',
-        detail: '소피아 설명 자리예요.\n아마 세 줄 정도 들어갈 거예요.\n블라블라'
+        text: '\n가끔 질문하지 않는 걸 받아들여야 해.\n나아가는 것에 만족해야만 해...\n너무 생각하지 말고.\n',
+        detail: '피에르의 아내.\n사랑하는 피에르의 부탁으로 니콜라와의 동거를 받아들인다.'
       }
     ]
 

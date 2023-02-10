@@ -11,13 +11,16 @@ const Container = styled.div`
     font-weight: 700;
     font-size: 1rem;
     color:#ffffff;
+    white-space: pre-wrap;
+    line-height: 200%;
+    text-align: center;
 `
 
 function NotFound() {
   return (
     <>
       <Container>
-        길을 잃으셨군요. 하지만 걱정하지 마세요. 이건 단지 지나가는 시기일 뿐이에요.
+        니콜라, 너 지금 혼자 길을 걷다가 여기까지 왔다는 소리야?{'\n'}말도 안 되는 소리야. 사람들이 그걸 믿을 거라고 생각해?{'\n\n'}여긴 길이 없어. 다른 길로 돌아가. 협상 불가야.
       </Container>
     </>
   );

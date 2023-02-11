@@ -16,7 +16,7 @@ const Container = styled.div`
     bottom: 0;
     right: 0;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
         display: none;
     }
 `

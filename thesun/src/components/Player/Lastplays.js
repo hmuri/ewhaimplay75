@@ -53,6 +53,7 @@ function Lastplays() {
   return (
     <Container>
       <Swiper
+        id="swiper-plays"
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}

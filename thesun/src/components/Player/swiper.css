@@ -1,11 +1,11 @@
-.swiper {
+#swiper-plays.swiper {
   width: 50vw;
   height: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.swiper-slide {
+#swiper-plays .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 12rem;
@@ -13,7 +13,7 @@
   margin: 0 2.5rem;
 }
 
-.swiper-slide img {
+#swiper-plays .swiper-slide img {
   display: block;
   width: 100%;
 }

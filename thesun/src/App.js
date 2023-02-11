@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import styled from 'styled-components';
 import Navbar from './components/Navbar/Navbar.js';
 import Main from './pages/Main.js';
@@ -12,6 +12,13 @@ import FloatingBtn from './components/FloatingBtn/FloatingBtn.js';
 import { useLocation, Route, Routes } from 'react-router-dom';
 
 const Container = styled.div`
+  @media ${props => props.theme.tablet} {
+    height: calc(var(--vh, 1vh) * 100);
+    position: relative;
+  }
+`
+
+const InsideContainer = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
@@ -26,39 +33,42 @@ const RightContainer = styled.div`
   align-items: center;
   padding-bottom: 8rem;
   
-  @media ${props => props.theme.mobile} {
+  @media ${props => props.theme.tablet} {
     width: 100%;
-}
+    margin-top: 5.5rem;
+    padding-bottom: 0;
+  }
 `
 
-function App() {
+function App({props}) {
   const location = useLocation();
 
-  // main
-  // info-player
-  // info-play
-  // info-ticket
-  // info-route
-
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+  useEffect(() => {
+    setScreenSize();
+  });
 
   return (
-    <>
+    <Container>
       <Navbar location={location.pathname}/>
-      <Container>
+      <InsideContainer>
         <RightContainer>
-            <Routes>
-              <Route path="/" element={<Main />}></Route>
-              <Route path="/info-implay/*" element={<Player />}></Route>
-              <Route path="/info-play/*" element={<Thesun />}></Route>
-              <Route path="/info-ticket/*" element={<Ticket />}></Route>
-              <Route path="/info-route" element={<Map />}></Route>
-              <Route path="*" element={<NotFound />}></Route>
-            </Routes>
-          <Footer/>
-        </RightContainer>
+              <Routes>
+                <Route path="/" element={<Main />}></Route>
+                <Route path="/info-implay/*" element={<Player />}></Route>
+                <Route path="/info-play/*" element={<Thesun />}></Route>
+                <Route path="/info-ticket/*" element={<Ticket />}></Route>
+                <Route path="/info-route" element={<Map />}></Route>
+                <Route path="*" element={<NotFound />}></Route>
+              </Routes>
+            <Footer/>
+          </RightContainer>
         <FloatingBtn/>
-      </Container>
-    </>
+      </InsideContainer>
+    </Container>
   );
 }
 

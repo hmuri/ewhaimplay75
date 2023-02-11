@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import TableList from './TableList';
 import LogoHeader from '../../assets/images/logo-header.png';
+import MobileNavbar from './MobileNavbar.js';
 
 const Container = styled.div`
     width: 11%;
@@ -18,9 +19,9 @@ const Container = styled.div`
     top: 0;
     left:0;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
         width: 100%;
-        height: 5.5rem;
+        height: ${props => props.isDisabled ? '5.5rem' : '9.5rem'};
         background-color: #172F53;
     }
 `
@@ -33,7 +34,7 @@ const Logo = styled.div`
     margin : 2rem auto;
     text-decoration: none;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
         display: none;
     }
 `
@@ -41,7 +42,7 @@ const Logo = styled.div`
 const MobileLogoBox = styled.div`
     display: none;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
         display: flex;
         width: 100%;
         height: 3rem;
@@ -51,7 +52,7 @@ const MobileLogoBox = styled.div`
 const MobileLogoImg = styled.img`
     display: none;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
         display: flex;
         width: 9rem;
         object-fit: contain;
@@ -64,7 +65,7 @@ const HorizontalLine = styled.div`
     height: 0.1rem;
     background-color: #172F53;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
         display: none;
     }
 `
@@ -72,16 +73,13 @@ const HorizontalLine = styled.div`
 const HorizontalNavbarContainer = styled.div`
     width: 100%;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
         height: 2.5rem;
         
         display: flex;
         justify-content: space-evenly;
         background-color: #ffffff;
-
-        position: absolute;
-        bottom: 0;
-      }
+    }
 `
 
 function Navbar({location}) {
@@ -147,7 +145,7 @@ function Navbar({location}) {
     ];
 
   return (
-    <Container>
+    <Container isDisabled={location === '/info-route' || location === '/'}>
         <NavLink exact to="/" style={{'textDecoration' : 'none'}}>
             <Logo>THE SUN</Logo>
             <MobileLogoBox>
@@ -160,6 +158,13 @@ function Navbar({location}) {
                 <TableList key={item.page} location={location} page={item.page} title={item.title} elements={item.elements}/>
             ))}
         </HorizontalNavbarContainer>
+        <MobileNavbar location={location} tableItems={
+            location.includes('info-implay') ? tableItems[0]
+            : location.includes('info-play') ? tableItems[1]
+            : location.includes('info-ticket') ? tableItems[2]
+            : location.includes('info-route') ? tableItems[3]
+            : ''
+        }/>
     </Container>
   );
 }

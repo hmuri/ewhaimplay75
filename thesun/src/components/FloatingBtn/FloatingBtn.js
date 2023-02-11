@@ -8,10 +8,10 @@ import twitter from '../../assets/images/Footer/footer-icon-twitter.png';
 const Container = styled.div`
     display: none;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
         display: flex;
-        width: 4.5rem;
-        height: 4.5rem;
+        width: 4rem;
+        height: 4rem;
         background-color: #2F558F;
         border-radius: 100%;
         position: fixed;

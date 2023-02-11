@@ -7,12 +7,13 @@ const TableContainer = styled(NavLink)`
     width: 100%;
     text-decoration: none;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
       height: 2.5rem;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items:center;
+      position: relative;
     }
 `
 
@@ -28,7 +29,7 @@ const TableTitle = styled.div`
     color: ${props => props.isActive == true ? '#ffffff' : '#172F53'};
     background-color: ${props => props.isActive == true ? '#172F53' : '#ffffff'};
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
       height: 2.5rem;
       background-color: #ffffff;
       color: #172F53;
@@ -40,7 +41,7 @@ const TableTitle = styled.div`
 const PolygonImg = styled.img`
     display: none;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
       display: ${props => props.isActive == true ? 'flex' : 'none'};
       width: 0.6rem;
       position: absolute;
@@ -57,7 +58,7 @@ const TableInsideConatiner = styled.div`
     align-items: center;
     padding: 0.8rem 0;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
       display: none;
     }
 `
@@ -70,7 +71,7 @@ const SmallElem = styled(NavLink)`
     padding : 0.8rem;
     text-decoration: none;
 
-    @media ${props => props.theme.mobile} {
+    @media ${props => props.theme.tablet} {
       display: none;
     }
 `
@@ -78,20 +79,22 @@ const SmallElem = styled(NavLink)`
 function TableList({location, page, title, elements}) {
 
   return (
-    <TableContainer exact to={"/"+page}>
-        <TableTitle isActive={location.includes(page)}>{title}</TableTitle>
-        <PolygonImg src={Polygon} isActive={location.includes(page)}/>
-        <TableInsideConatiner isActive={location.includes(page) && (location !== '/info-route')}>
-        {elements.map((content) => (
-            <SmallElem
-              exact to = {"/"+page+"/"+content.page}
-              isActive={content.page ? location === "/"+page+"/" + content.page : (location === "/"+page) || (location === "/"+page+"/")}
-            >
-              {content.title}
-            </SmallElem>
-        ))}
-        </TableInsideConatiner>
-    </TableContainer>
+    <>
+      <TableContainer exact to={"/"+page}>
+          <TableTitle isActive={location.includes(page)}>{title}</TableTitle>
+          <PolygonImg src={Polygon} isActive={location.includes(page)}/>
+          <TableInsideConatiner isActive={location.includes(page) && (location !== '/info-route')}>
+          {elements.map((content) => (
+              <SmallElem
+                exact to = {"/"+page+"/"+content.page}
+                isActive={content.page ? location === "/"+page+"/" + content.page : (location === "/"+page) || (location === "/"+page+"/")}
+              >
+                {content.title}
+              </SmallElem>
+          ))}
+          </TableInsideConatiner>
+      </TableContainer>
+    </>
   );
 }
 

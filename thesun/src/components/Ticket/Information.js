@@ -6,9 +6,8 @@ const Container = styled.div`
   width:100%;
   display:flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin-top: 2rem;
 `
 
 const TitleBox = styled.div`

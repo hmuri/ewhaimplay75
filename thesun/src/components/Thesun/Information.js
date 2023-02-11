@@ -6,7 +6,6 @@ const Container = styled.div`
   display:flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 3.5rem;
 `
 
 const LeftBox = styled.div`

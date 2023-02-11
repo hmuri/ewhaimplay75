@@ -6,10 +6,11 @@ import KakaoMap from '../components/Map/KakaoMap.js';
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #172F53;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 `
 
@@ -17,7 +18,6 @@ const InsideBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 10rem;
 `
 
 const TitleText = styled.div`
@@ -26,7 +26,7 @@ const TitleText = styled.div`
   flex-direction: column;
   align-items: flex-start;
   color: #ffffff;
-  margin: 2rem 0;
+  margin-bottom: 1rem;
 `
 
 const BottomBox = styled.div`
@@ -36,17 +36,10 @@ const BottomBox = styled.div`
 
 const UpperBox = styled.div`
   display: flex;
-  height: 40%;
 `
 
-// const KakaoMap = styled.div`
-//   width: 20rem;
-//   height: 100%;
-//   border: solid 1px white;
-// `
-
 const HallImg = styled.img`
-  height: 100%;
+  height: 14.5rem;
   object-fit: contain;
   margin-left: 1rem;
 `
@@ -84,7 +77,7 @@ function Map() {
       <Container>
         <InsideBox>
           <TitleText>
-            <span style={{'fontWeight' : '700', 'fontSize' : '1.5rem', 'marginBottom' : '1rem'}}>이화여자대학교 생활환경관 소극장</span>
+            <span style={{'fontWeight' : '700', 'fontSize' : '1.5rem', 'marginBottom' : '0.5rem'}}>이화여자대학교 생활환경관 소극장</span>
             <span style={{'fontWeight' : '400', 'fontSize' : '1.2rem'}}>서울특별시 서대문구 이화여대길 52</span>
           </TitleText>
           <BottomBox>

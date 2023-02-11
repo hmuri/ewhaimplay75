@@ -8,6 +8,7 @@ import Ticket from './pages/Ticket.js';
 import Map from './pages/Map.js';
 import NotFound from './pages/NotFound.js';
 import Footer from './components/Footer.js';
+import FloatingBtn from './components/FloatingBtn/FloatingBtn.js';
 import { useLocation, Route, Routes } from 'react-router-dom';
 
 const Container = styled.div`
@@ -19,6 +20,11 @@ const Container = styled.div`
 
 const RightContainer = styled.div`
   width: 89%;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8rem;
   
   @media ${props => props.theme.mobile} {
     width: 100%;
@@ -50,6 +56,7 @@ function App() {
             </Routes>
           <Footer/>
         </RightContainer>
+        <FloatingBtn/>
       </Container>
     </>
   );

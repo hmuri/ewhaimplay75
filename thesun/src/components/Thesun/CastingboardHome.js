@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom';
 
 const Container = styled.div`
   width:100%;
-  height: 100vh;
+  height: 100%;
   background-color: #ffffff;
   display:flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 `
 
 const LayoutContainer = styled.div`

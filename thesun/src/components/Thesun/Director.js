@@ -7,13 +7,12 @@ const Container = styled.div`
   height: 100vh;
   display:flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background: ${props => `url(${props.imageUri}) no-repeat center right`};
 `
 
 const TextBox = styled.div`
   width: 80%;
-  margin-top: 7rem;
   text-align:center;
   font-weight: 700;
   line-height: 200%;

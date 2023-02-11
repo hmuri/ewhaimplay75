@@ -8,7 +8,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
 `
 
 const UpperBox = styled.div`

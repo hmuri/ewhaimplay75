@@ -7,7 +7,6 @@ const LogoImage = styled.img`
     border-left: solid 0.1rem white;
     border-right: solid 0.1rem white;
     margin-bottom: 2rem;
-    margin-top: 6.5rem;
 `
 
 const PlayerIntroduction = styled.div`

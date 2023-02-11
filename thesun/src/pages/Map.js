@@ -12,12 +12,20 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media ${props => props.theme.tablet} {
+    padding: 0 1.5rem;
+  }
 `
 
 const InsideBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media ${props => props.theme.tablet} {
+    align-items: center;
+  }
 `
 
 const TitleText = styled.div`
@@ -27,6 +35,11 @@ const TitleText = styled.div`
   align-items: flex-start;
   color: #ffffff;
   margin-bottom: 1rem;
+
+  @media ${props => props.theme.tablet} {
+    align-items: center;
+    margin-bottom: 2rem;
+  }
 `
 
 const BottomBox = styled.div`
@@ -36,12 +49,21 @@ const BottomBox = styled.div`
 
 const UpperBox = styled.div`
   display: flex;
+
+  @media ${props => props.theme.tablet} {
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const HallImg = styled.img`
   height: 14.5rem;
   object-fit: contain;
   margin-left: 1rem;
+
+  @media ${props => props.theme.tablet} {
+    display: none;
+  }
 `
 
 const NoticeBox = styled.div`
@@ -58,6 +80,15 @@ const NoticeBox = styled.div`
   > b{
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+  }
+
+  @media ${props => props.theme.tablet} {
+    width: auto;
+    background-color: transparent;
+
+    span:last-child{
+      margin-top: 1rem;
+    }
   }
 `
 
@@ -77,7 +108,7 @@ function Map() {
       <Container>
         <InsideBox>
           <TitleText>
-            <span style={{'fontWeight' : '700', 'fontSize' : '1.5rem', 'marginBottom' : '0.5rem'}}>이화여자대학교 생활환경관 소극장</span>
+            <span style={{'fontWeight' : '700', 'fontSize' : '1.4rem', 'marginBottom' : '0.5rem'}}>이화여자대학교 생활환경관 소극장</span>
             <span style={{'fontWeight' : '400', 'fontSize' : '1.2rem'}}>서울특별시 서대문구 이화여대길 52</span>
           </TitleText>
           <BottomBox>

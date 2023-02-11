@@ -12,6 +12,10 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media ${props => props.theme.tablet} {
+      padding: 0 1.5rem;
+    }
 `
 
 function Player() {

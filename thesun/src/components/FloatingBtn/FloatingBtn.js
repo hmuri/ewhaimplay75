@@ -1,30 +1,96 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import instagram from '../../assets/images/Footer/footer-icon-instagram.png';
-import kakaotalk from '../../assets/images/Footer/footer-icon-kakaotalk.png';
-import twitter from '../../assets/images/Footer/footer-icon-twitter.png';
+import { React, useState } from 'react';
+import styled, { keyframes } from 'styled-components';
+import SpaceBtn from './SpaceBtn';
 
-const Container = styled.div`
-    display: none;
+const popUp = keyframes`
+  0% {
+    transform: scale(0);
+    transform: translate(-50%, 4rem);
+    opacity:0;
+  }
+  100% {
+    transform: scale(1);
+    transform:translate(-50%, 0);
+    opacity:1;
+  }
+`;
 
-    @media ${props => props.theme.tablet} {
-        display: flex;
-        width: 4rem;
-        height: 4rem;
-        background-color: #2F558F;
-        border-radius: 100%;
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-    }
+const FloatBtnWrapper = styled.div`
+  display: none;
+
+  @media ${props => props.theme.tablet} {
+    display: flex;
+    position: fixed;
+    bottom: 2rem;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    transform-origin: center center;
+    animation: ${popUp} 0.2s both ease-in;
+    box-shadow: 3px 3px 10px #091A33;
+  }
+`
+
+const FloatButton = styled.div`
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
 `
 
 function FloatingBtn() {
+  const [isActive, setIsActive] = useState(false);
+
+  const onTransfrom = () => {
+    setIsActive(!isActive);
+  };
+
+  const positionTable = [
+    { x: '-16.8rem', y: '0.2rem' },
+    { x: '-12.6rem', y: '0.2rem' },
+    { x: '-8.4rem', y: '0.2rem' },
+    { x: '-4.2rem', y: '0.2rem' },
+  ]
+
+  const innerContents = [
+    {
+      'title' : 'kakaotalk',
+      'url' : '',
+    },
+    {
+      'title' : 'form',
+      'url' : '',
+    },
+    {
+      'title' : 'twitter',
+      'url' : 'https://twitter.com/ewha_implay',
+    },
+    {
+      'title' : 'instagram',
+      'url' : 'https://www.instagram.com/ewha_implay/',
+    }
+  ]
 
   return (
-    <Container>
-    </Container>
+    <FloatBtnWrapper>
+      {positionTable.map((pos, idx) => (
+          <SpaceBtn
+            isActive={isActive}
+            key={'content-' + idx}
+            delay={`${idx / 10}s`}
+            transPosition={pos}
+            innerContents={innerContents[idx]}
+          />
+      ))}
+      <FloatButton
+          isActive={isActive}
+          onClick={onTransfrom}
+        >
+        </FloatButton>
+    </FloatBtnWrapper>
   );
 }
 

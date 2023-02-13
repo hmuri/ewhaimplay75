@@ -15,6 +15,7 @@ const Container = styled.div`
 
   @media ${props => props.theme.tablet} {
     padding: 0 1.5rem;
+    padding-bottom: 5rem;
   }
 `
 

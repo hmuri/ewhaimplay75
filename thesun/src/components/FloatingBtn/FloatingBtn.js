@@ -58,11 +58,11 @@ function FloatingBtn() {
   const innerContents = [
     {
       'title' : 'kakaotalk',
-      'url' : '',
+      'url' : 'https://open.kakao.com/o/sljJW73e',
     },
     {
       'title' : 'form',
-      'url' : '',
+      'url' : 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSexZWV5BX_feGKzQ6924aWsEiSdME3hRu7tjmfN1939eeXe1A/closedform',
     },
     {
       'title' : 'twitter',

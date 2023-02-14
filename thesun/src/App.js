@@ -59,7 +59,7 @@ function App({props}) {
     <Container>
       <Navbar location={location.pathname}/>
       <InsideContainer>
-        <RightContainer isCastingBoard={location.pathname.includes('/casting-board')}>
+        <RightContainer isCastingBoard={location.pathname.includes('/casting-board') || location.pathname.includes('/director-says')}>
               <Routes>
                 <Route path="/" element={<Main />}></Route>
                 <Route path="/info-implay/*" element={<Player />}></Route>

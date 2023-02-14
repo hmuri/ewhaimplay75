@@ -10,10 +10,6 @@ const Container = styled.div`
   align-items: center;
   background: ${props => `url(${props.imageUri}) no-repeat center right`};
 
-  @media ${props => props.theme.tablet} {
-    margin-top: -1.5rem;
-  }
-
   @media ${props => props.theme.mobile} {
     background: none;
     margin-top: 0;

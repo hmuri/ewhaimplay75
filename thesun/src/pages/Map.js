@@ -18,7 +18,7 @@ const InsideBox = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  @media ${props => props.theme.tablet} {
+  @media ${props => props.theme.mobile} {
     align-items: center;
   }
 `
@@ -31,7 +31,7 @@ const TitleText = styled.div`
   color: #ffffff;
   margin-bottom: 1rem;
 
-  @media ${props => props.theme.tablet} {
+  @media ${props => props.theme.mobile} {
     align-items: center;
     margin-bottom: 2rem;
   }
@@ -45,7 +45,7 @@ const BottomBox = styled.div`
 const UpperBox = styled.div`
   display: flex;
 
-  @media ${props => props.theme.tablet} {
+  @media ${props => props.theme.mobile} {
     justify-content: center;
     align-items: center;
   }
@@ -56,7 +56,7 @@ const HallImg = styled.img`
   object-fit: contain;
   margin-left: 1rem;
 
-  @media ${props => props.theme.tablet} {
+  @media ${props => props.theme.mobile} {
     display: none;
   }
 `
@@ -77,7 +77,7 @@ const NoticeBox = styled.div`
     margin-bottom: 0.5rem;
   }
 
-  @media ${props => props.theme.tablet} {
+  @media ${props => props.theme.mobile} {
     width: auto;
     background-color: transparent;
 

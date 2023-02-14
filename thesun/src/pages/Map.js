@@ -21,12 +21,6 @@ const InsideBox = styled.div`
   @media ${props => props.theme.tablet} {
     align-items: center;
   }
-
-  @media ${props => props.theme.tablet} {
-    padding: 5rem 1.5rem;
-    margin-top: 5rem;
-    background-color: #172F53;
-  }
 `
 
 const TitleText = styled.div`

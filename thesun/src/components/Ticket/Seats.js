@@ -18,7 +18,7 @@ const Container = styled.div`
     margin-top: 50%;
     padding-bottom: 7rem;
     background-color: #172F53;
-    padding-left: 1rem;
+    padding: 1rem;
   }
 `
 

@@ -8,10 +8,15 @@ const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
+  @media ${props => props.theme.tablet} {
+    margin-top: 9rem;
+  }
+
   @media ${props => props.theme.mobile}{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 15rem;
   }
 `
 

@@ -7,12 +7,16 @@ const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
+  @media ${props => props.theme.tablet} {
+    margin-top: 9rem;
+  }
+
   @media ${props => props.theme.mobile} {
     flex-direction: column;
     justify-content: center;
-    margin-top: 100%;
     padding-bottom: 7rem;
     background-color: #172F53;
+    margin-top: 180%;
   }
 `
 
@@ -35,7 +39,7 @@ const LeftBox = styled.div`
 
   @media ${props => props.theme.mobile} {
     align-items: center;
-    width: 80%
+    width: 85%
   }
 `
 

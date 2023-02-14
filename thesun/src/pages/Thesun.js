@@ -20,15 +20,15 @@ const Container = styled.div`
   }
 
   @media ${props => props.theme.mobile} {
-    margin-top: 0;
     padding-bottom: 0;
+    margin-top: 0;
   }
 `
 
 function Thesun({location}) {
   return (
     <>
-      <Container notPadding = {location.includes('/director-says') || location.includes('/casting-board')}>
+      <Container notPadding = {location.includes('/director-says') || location.includes('/casting-board')} notMargin={location.includes('/director-says')}>
         <Routes>
           <Route path="" element={<Information />}></Route>
           <Route path="/writer" element={<Writer />}></Route>

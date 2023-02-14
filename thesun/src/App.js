@@ -37,9 +37,15 @@ const RightContainer = styled.div`
   
   @media ${props => props.theme.tablet} {
     width: 100%;
-    height: 100%;
+    height: auto;
     margin-top: 5.5rem;
     padding-bottom: ${props => props.isCastingBoard? '0' : '5rem'};
+    background-color: #172F53;
+  }
+
+  @media ${props => props.theme.mobile} {
+    width: 100%;
+    height: ${props => props.isMain? 'auto' : '100%'};
     background-color: #172F53;
   }
 `
@@ -59,7 +65,7 @@ function App({props}) {
     <Container>
       <Navbar location={location.pathname}/>
       <InsideContainer>
-        <RightContainer isCastingBoard={location.pathname.includes('/casting-board') || location.pathname.includes('/director-says')}>
+        <RightContainer isMain={location.pathname.includes('/info-implay') || location.pathname.includes('/info-play')} isCastingBoard={location.pathname.includes('/casting-board') || location.pathname.includes('/director-says')}>
               <Routes>
                 <Route path="/" element={<Main />}></Route>
                 <Route path="/info-implay/*" element={<Player />}></Route>

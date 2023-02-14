@@ -21,7 +21,7 @@ const SmallElem = styled(NavLink)`
   
   @media ${props => props.theme.tablet} {
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: ${props => props.isActive ? '700' : '400'};
     opacity : ${props => props.isActive ? '1' : '0.5'};
     color: #ffffff;

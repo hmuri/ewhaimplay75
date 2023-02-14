@@ -10,6 +10,10 @@ const Container = styled.div`
   font-weight: 700;
   font-size: 1.5rem;
   color:#ffffff;
+
+  @media ${props => props.theme.tablet} {
+    height: 60vh;
+  }
   
   @media ${props => props.theme.mobile} {
     font-size: 1.1rem;

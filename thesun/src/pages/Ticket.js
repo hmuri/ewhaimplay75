@@ -7,13 +7,17 @@ import Seats from '../components/Ticket/Seats.js';
 import Caution from '../components/Ticket/Caution.js';
 
 const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: #172F53;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #172F53;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media ${props => props.theme.mobile} {
+    padding-bottom: 5rem;
+  }
 `
 
 function Ticket() {

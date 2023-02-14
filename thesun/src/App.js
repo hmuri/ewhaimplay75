@@ -17,6 +17,19 @@ const Container = styled.div`
   @media ${props => props.theme.tablet} {
     height: calc(var(--vh, 1vh) * 100);
     position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+`
+
+const NavContainer = styled.div`
+  display: none;
+
+  @media ${props => props.theme.tablet} {
+    display: flex;
+    visibility: hidden;
+    width: 100%;
+    height: 9.5rem;
   }
 `
 
@@ -25,6 +38,13 @@ const InsideContainer = styled.div`
   height: 100vh;
   display: flex;
   justify-content: flex-end;
+
+  @media ${props => props.theme.tablet} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
 `
 
 const RightContainer = styled.div`
@@ -37,19 +57,13 @@ const RightContainer = styled.div`
   
   @media ${props => props.theme.tablet} {
     width: 100%;
-    height: auto;
-    margin-top: 5.5rem;
-    padding-bottom: ${props => props.nonPadding? '0' : '5rem'};
     background-color: #172F53;
+    padding-bottom: ${props => props.isMap ? '5rem' : props.isCastingDetail ? '10rem' : '0'};
+    margin-top: ${props => props.isCastingDetail ? '5rem' : '0'};
   }
 
   @media ${props => props.theme.mobile} {
-    width: 100%;
-    height: ${props => props.isMain? 'auto' : '100%'};
-    background-color: #172F53;
-
-    margin-top: ${props => props.isCastingBoard? '15rem' : '0'};
-    padding-bottom: ${props => props.isCastingBoard? '5rem' : '0'};
+    padding-bottom: ${props => props.isMap? '11rem' : props.isCastingDetail ? '10rem' : '0'};
   }
 `
 
@@ -68,8 +82,10 @@ function App({props}) {
     <Container>
       <Navbar location={location.pathname}/>
       <InsideContainer>
-        <RightContainer isMain={location.pathname.includes('/info-implay') || location.pathname==='/info-play'} nonPadding={location.pathname.includes('/casting-board') || location.pathname.includes('/director-says')}
-        isCastingBoard={location.pathname.includes('/casting-board/pierre') || location.pathname.includes('/casting-board/nicolas') || location.pathname.includes('/casting-board/anne') || location.pathname.includes('/casting-board/sopia')}>
+        <NavContainer/>
+        <RightContainer
+          isMap={location.pathname.includes('/info-route')}
+          isCastingDetail={location.pathname.includes('pierre') || location.pathname.includes('anne') || location.pathname.includes('nicolas') || location.pathname.includes('sopia')}>
               <Routes>
                 <Route path="/" element={<Main />}></Route>
                 <Route path="/info-implay/*" element={<Player />}></Route>

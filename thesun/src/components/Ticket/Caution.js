@@ -10,7 +10,6 @@ const Container = styled.div`
   align-items: center;
 
   @media ${props => props.theme.mobile} {
-    padding-bottom: 5rem;
     background-color: #172F53;
   }
 `
@@ -24,7 +23,6 @@ const UpperBox = styled.div`
   @media ${props => props.theme.mobile} {
     width: 90%;
     flex-direction : column;
-    margin: 30rem 0 2rem;
   }
 `
 
@@ -135,7 +133,7 @@ function Caution() {
             <BottomContentsText>
                 <li>티켓 및 MD 배부는 공연 1시간 전부터 극장 앞 티켓 박스에서 이루어집니다.</li>
                 <li>좌석은 공연 당일 티켓 배부 시 “선착순”으로 선택 가능합니다.</li>
-                <li>당일 잔여석 및 잔여 MD에 한하여 공연 시작 00분 전까지 현장 예매가 가능합니다.</li>
+                <li>당일 잔여석 및 잔여 MD에 한하여 공연 시작 20분 전까지 현장 예매가 가능합니다.</li>
                 <li>회차별 잔여석은 사이트의의 [좌석 정보] 탭 또는 당일 티켓 부스에서 확인 가능합니다.</li>
             </BottomContentsText>
             <BottomTitleText>무통장 입금 시</BottomTitleText>

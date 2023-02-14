@@ -10,9 +10,8 @@ const Container = styled.div`
   align-items: center;
 
   @media ${props => props.theme.mobile} {
-    margin-top: 30rem;
-    padding-bottom: 7rem;
     background-color: #172F53;
+    margin-top: 2rem;
   }
 `
 
@@ -112,7 +111,7 @@ function Information() {
             <MiddleContainer>
                 <RightTitle>| 재관람 혜택 |</RightTitle>
                 <RightMiddle>2회 관람 시 | 1000원 할인 or 굿즈 1종{'\n'}3회 관람 시 | 2000원 할인 or 굿즈 2종{'\n'}4회 관람 시 | 티켓 1매 추가 증정 </RightMiddle>
-                <RightBottom>* 관람하신 공연의 티켓을 지참하신 경우에만 가능합니다.{'\n'}* X회 관람 시 증정하는 MD는 현장에서 수령 가능합니다.{'\n'}* X회 관람 시 적용되는 할인 혜택은 현장에서 페이백 해드립니다.</RightBottom>
+                <RightBottom>* 관람하신 공연의 티켓을 지참하신 경우에만 가능합니다.{'\n'}* 재관람 시 증정하는 MD는 현장에서 수령 가능합니다.{'\n'}* 재관람 시 적용되는 할인 혜택은 현장에서 페이백 해드립니다.</RightBottom>
             </MiddleContainer>
         </MiddleBox>
         <BottomBox>1매 6,000원</BottomBox>

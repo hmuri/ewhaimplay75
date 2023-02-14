@@ -9,11 +9,6 @@ const Container = styled.div`
   display:flex;
   justify-content: center;
   align-items: center;
-
-  @media ${props => props.theme.mobile} {
-    padding-top: 4rem;
-    padding-bottom: 7rem;
-  }
 `
 
 const MiddleContainer = styled.div`
@@ -25,6 +20,7 @@ const MiddleContainer = styled.div`
   @media ${props => props.theme.mobile} {
     flex-direction: column;
     align-items: center;
+    margin-top: 5rem;
   }
 `
 

@@ -10,20 +10,23 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media ${props => props.theme.mobile} {
+  @media ${props => props.theme.tablet} {
     background-color: #172F53;
-    margin-top: 10rem;
-    padding: 2rem 0;
+    height: 70vh;
+  }
+
+  @media ${props => props.theme.mobile} {
+    height: 100%;
   }
 `
 
 const LayoutContainer = styled.div`
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  @media ${props => props.theme.tablet} {
-    display: none;
+  @media ${props => props.theme.mobile} {
+    display : none;
   }
 `
 
@@ -33,25 +36,14 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media ${props => props.theme.tablet} {
+    flex-direction: row;
+  }
+
   @media ${props => props.theme.mobile} {
     height: 11rem;
     margin: 0rem;
   } 
-`
-
-const TabletImageContainer = styled.div`
-  display: none;
-
-  @media ${props => props.theme.tablet} {
-    display: flex;
-  }
-
-  @media ${props => props.theme.mobile} {
-    display: none;
-  }
-`
-
-const TabletImageLine = styled.div`
 `
 
 const MobileImageContainer = styled.div`
@@ -59,7 +51,6 @@ const MobileImageContainer = styled.div`
 
   @media ${props => props.theme.mobile} {
     display: flex;
-    flex-direction : row;
   }
 `
 
@@ -77,7 +68,7 @@ function CastingboardHome() {
         <ImageContainer>
           <CastingCard nameEN={'pierre'} nameKR={'피에르'} marginBottom={'5rem'}/>
         </ImageContainer>
-        <ImageContainer>
+        <ImageContainer isRow={true}>
           <CastingCard nameEN={'nicolas'} nameKR={'니콜라'}/>
           <CastingCard nameEN={'anne'} nameKR={'안느'}/>
         </ImageContainer>
@@ -85,17 +76,6 @@ function CastingboardHome() {
           <CastingCard nameEN={'sopia'} nameKR={'소피아'} marginBottom={'-5rem'}/>
         </ImageContainer>
       </LayoutContainer>
-
-      <TabletImageContainer>
-        <TabletImageLine>
-          <CastingCard nameEN={'pierre'} nameKR={'피에르'} margin={'top'}/>
-          <CastingCard nameEN={'nicolas'} nameKR={'니콜라'} margin={'bottom'}/>
-        </TabletImageLine>
-        <TabletImageLine>
-          <CastingCard nameEN={'anne'} nameKR={'안느'} margin={'top'}/>
-          <CastingCard nameEN={'sopia'} nameKR={'소피아'} marginBottom={'-5rem'} margin={'bottom'}/>
-        </TabletImageLine>
-        </TabletImageContainer>
 
       <MobileImageContainer>
         <MobileImageLine>

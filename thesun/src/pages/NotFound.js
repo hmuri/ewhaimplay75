@@ -18,6 +18,10 @@ const Container = styled.div`
     @media ${props => props.theme.tablet} {
       padding: 0 1.5rem;
     }
+
+    @media ${props => props.theme.tablet} {
+      font-size: 0.9rem;
+    }
 `
 
 function NotFound() {

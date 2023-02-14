@@ -8,6 +8,10 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media ${props => props.theme.mobile} {
+        margin-top: 10rem;
+    }
 `
 
 const CenterBox = styled.div`

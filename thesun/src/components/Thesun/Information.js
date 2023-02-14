@@ -14,9 +14,8 @@ const Container = styled.div`
   @media ${props => props.theme.mobile} {
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 7rem;
     background-color: #172F53;
-    margin-top: 180%;
+    margin-top: 2rem;
   }
 `
 

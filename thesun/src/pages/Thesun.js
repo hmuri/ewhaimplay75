@@ -16,8 +16,7 @@ const Container = styled.div`
   align-items: center;
 
   @media ${props => props.theme.tablet} {
-    margin-top: 10rem;
-    padding-bottom: ${props => props.isDirectorPage? '0' : '5rem'};
+    padding-bottom: ${props => props.notPadding? '0' : '5rem'};
   }
 
   @media ${props => props.theme.mobile} {
@@ -29,7 +28,7 @@ const Container = styled.div`
 function Thesun({location}) {
   return (
     <>
-      <Container isDirectorPage = {location.includes('/director-says') }>
+      <Container notPadding = {location.includes('/director-says') || location.includes('/casting-board')}>
         <Routes>
           <Route path="" element={<Information />}></Route>
           <Route path="/writer" element={<Writer />}></Route>

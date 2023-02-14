@@ -1,24 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import CastingCard from './CastingCard';
 
 const Container = styled.div`
-  width:120%;
-  height: 120%;
+  width:100%;
+  height: 100%;
   background-color: #ffffff;
   display:flex;
   justify-content: center;
   align-items: center;
 
+  @media ${props => props.theme.mobile} {
+    margin-top: 0;
+  }
 `
 
 const LayoutContainer = styled.div`
   display:flex;
   justify-content: center;
   align-items: center;
+
   @media ${props => props.theme.tablet} {
-    width: 100%;
-  } 
+    display: none;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -26,51 +31,42 @@ const ImageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media ${props => props.theme.tablet} {
+
+  @media ${props => props.theme.mobile} {
     height: 11rem;
     margin: 0rem;
   } 
 `
-const MiddleContainer = styled(NavLink)`
-  position:relative;
 
-  -webkit-filter: grayscale(100%);
-  -webkit-transition: .5s ease-in-out;
-  -moz-filter: grayscale(100%); 
-  -moz-transition: .5s ease-in-out;
-  -o-filter: grayscale(100%); 
-  -o-transition: .5s ease-in-out;
+const TabletImageContainer = styled.div`
+  display: none;
 
-  :hover {
-    -webkit-filter: grayscale(0%);
-    -webkit-transition: .5s ease-in-out;
-    -moz-filter: grayscale(0%);
-    -moz-transition: .5s ease-in-out;
-    -o-filter: grayscale(0%);
-    -o-transition: .5s ease-in-out;
+  @media ${props => props.theme.tablet} {
+    display: flex;
+  }
+
+  @media ${props => props.theme.mobile} {
+    display: none;
   }
 `
 
-const ProfileImage = styled.img`
-  height: 18rem;
-  margin: 0.5rem;
-  @media ${props => props.theme.tablet} {
-    height: 11rem;
-    height: 10rem;
-    margin: 0.3rem;
-  }  
-
+const TabletImageLine = styled.div`
 `
 
-const NameBox = styled.div`
-  position:absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translate(-50%);
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 1rem;
-  text-shadow: 3px 3px 6px black;
+const MobileImageContainer = styled.div`
+  display: none;
+
+  @media ${props => props.theme.mobile} {
+    display: flex;
+    flex-direction : row;
+  }
+`
+
+const MobileImageLine = styled.div`
+  @media ${props => props.theme.mobile} {
+    display: flex;
+    flex-direction : column;
+  }
 `
 
 function CastingboardHome() {
@@ -78,28 +74,38 @@ function CastingboardHome() {
     <Container>
       <LayoutContainer>
         <ImageContainer>
-          <MiddleContainer exact to= "/info-play/casting-board/pierre" style={{'marginBottom' : '6rem'}}>
-            <ProfileImage src={'/images/profiles/pierre1.jpg'}/>
-            <NameBox>피에르</NameBox>
-          </MiddleContainer>
+          <CastingCard nameEN={'pierre'} nameKR={'피에르'} marginBottom={'5rem'}/>
         </ImageContainer>
         <ImageContainer>
-          <MiddleContainer exact to= "/info-play/casting-board/nicolas" >
-            <ProfileImage src={'/images/profiles/nicolas1.jpg'}/>
-            <NameBox>니콜라</NameBox>
-          </MiddleContainer>
-          <MiddleContainer exact to= "/info-play/casting-board/anne" >
-            <ProfileImage src={'/images/profiles/anne1.jpg'}/>
-            <NameBox>안느</NameBox>
-          </MiddleContainer>
+          <CastingCard nameEN={'nicolas'} nameKR={'니콜라'}/>
+          <CastingCard nameEN={'anne'} nameKR={'안느'}/>
         </ImageContainer>
         <ImageContainer>
-          <MiddleContainer exact to= "/info-play/casting-board/sopia" style={{'marginTop' : '6rem'}}>
-            <ProfileImage src={'/images/profiles/sopia1.jpg'}/>
-            <NameBox>소피아</NameBox>
-          </MiddleContainer>
+          <CastingCard nameEN={'sopia'} nameKR={'소피아'} marginBottom={'-5rem'}/>
         </ImageContainer>
       </LayoutContainer>
+
+      <TabletImageContainer>
+        <TabletImageLine>
+          <CastingCard nameEN={'pierre'} nameKR={'피에르'} margin={'top'}/>
+          <CastingCard nameEN={'nicolas'} nameKR={'니콜라'} margin={'bottom'}/>
+        </TabletImageLine>
+        <TabletImageLine>
+          <CastingCard nameEN={'anne'} nameKR={'안느'} margin={'top'}/>
+          <CastingCard nameEN={'sopia'} nameKR={'소피아'} marginBottom={'-5rem'} margin={'bottom'}/>
+        </TabletImageLine>
+        </TabletImageContainer>
+
+      <MobileImageContainer>
+        <MobileImageLine>
+          <CastingCard nameEN={'pierre'} nameKR={'피에르'} margin={'top'}/>
+          <CastingCard nameEN={'anne'} nameKR={'안느'} margin={'top'}/>
+        </MobileImageLine>
+        <MobileImageLine style={{'marginTop' : '3rem'}}>
+          <CastingCard nameEN={'nicolas'} nameKR={'니콜라'} margin={'bottom'}/>
+          <CastingCard nameEN={'sopia'} nameKR={'소피아'} marginBottom={'-5rem'} margin={'bottom'}/>
+        </MobileImageLine>
+        </MobileImageContainer>
     </Container>
   );
 }

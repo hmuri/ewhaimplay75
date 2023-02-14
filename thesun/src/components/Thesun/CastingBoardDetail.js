@@ -9,6 +9,10 @@ const Container = styled.div`
   display:flex;
   justify-content: center;
   align-items: center;
+
+  @media ${props => props.theme.mobile} {
+    padding-top: 4rem;
+  }
 `
 
 const MiddleContainer = styled.div`
@@ -16,21 +20,16 @@ const MiddleContainer = styled.div`
   display:flex;
   justify-content: center;
   align-items: flex-start;
-  @media ${props => props.theme.tablet} {
-    flex-direction: column;
-  }  
 
+  @media ${props => props.theme.mobile} {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const ImageContainer = styled.div`
   display: flex;
-  height: 70%;
-  @media ${props => props.theme.tablet} {
-    height: 70%;
-    padding-left: 20%;  
-    padding-top: 2rem; 
-  } 
-  
+  height: 100%;
 `
 
 const GreyImageContainer = styled.div`
@@ -38,10 +37,10 @@ const GreyImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media ${props => props.theme.tablet} {
-    height: 18rem;
-    height: 50%;
-  } 
+
+  @media ${props => props.theme.mobile} {
+    height: 20rem;
+  }
 `
 
 const NavImage = styled(NavLink)`
@@ -49,14 +48,12 @@ const NavImage = styled(NavLink)`
   object-fit: contain;
   margin-right: 0.35rem;
   cursor: pointer;
-
   -webkit-filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   -moz-filter: grayscale(100%); 
   -moz-transition: .5s ease-in-out;
   -o-filter: grayscale(100%); 
   -o-transition: .5s ease-in-out;
-
   :hover {
     -webkit-filter: grayscale(0%);
     -webkit-transition: .5s ease-in-out;
@@ -71,23 +68,17 @@ const GreyImage = styled.img`
   height: 100%;
   object-fit: contain;
   border: solid #ffffff 0.01rem;
-  @media ${props => props.theme.tablet} {
-    height: 100%;
-  } 
 `
 
 const MainImageContainer = styled.div`
-  @media ${props => props.theme.tablet} {
-    height: 36rem;
-    height: 100%;
-  }
 `
 
 const Poster = styled.img`
     height: 27rem;
     border: solid #ffffff 0.01rem;
-    @media ${props => props.theme.tablet} {
-      height: 50%;
+   
+    @media ${props => props.theme.mobile} {
+      height: 20rem;
     }
 `
 
@@ -98,6 +89,11 @@ const RightBox = styled.div`
     flex-direction : column;
     justify-content: space-between;
     margin-left: 3rem;
+
+    @media ${props => props.theme.mobile} {
+      margin: 0;
+      width: 70vw;
+    }
 `
 
 const ScriptBox = styled.div`
@@ -106,12 +102,13 @@ const ScriptBox = styled.div`
     color: #ffffff;
     margin-top: 2rem;
     font-style: italic;
-    @media ${props => props.theme.tablet} {
-      margin-top: 1rem;
+
+    @media ${props => props.theme.mobile} {
+      margin-top: 2rem;
       font-size: 1.1rem;
       font-weight: 100;
-      margin-left: 10%;
-    } 
+      margin-bottom: 2rem;
+    }
 `
 
 const BottomBox = styled.div`
@@ -127,11 +124,6 @@ const NameBox = styled.div`
   font-weight: 700;
   color: #ffffff;
   font-family: 'Pretendard';
-  @media ${props => props.theme.tablet} {
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-left: 10%
-  } 
 `
 
 const CastBox = styled.div`
@@ -140,9 +132,6 @@ const CastBox = styled.div`
   color: #ffffff;
   font-family: 'Pretendard';
   margin-left: 0.5rem;
-  @media ${props => props.theme.tablet} {
-
-  } 
 `
 
 const DetailBox = styled.div`
@@ -150,82 +139,7 @@ const DetailBox = styled.div`
   font-weight: 400;
   color: #ffffff;
   margin-top: 2rem;
-  @media ${props => props.theme.tablet} {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #ffffff;
-    margin-top: 2rem;
-    margin-left: 10%;
-  } 
 `
-const RightBox_ = styled.div`
-  display:none;
-  
-  @media ${props => props.theme.tablet} {
-    display:flex;
-      width: 25rem;
-      height: 100%;
-      flex-direction : column;
-      justify-content: space-between;
-      margin-left: 3rem;
-      flex-direction: column;
-  }
-`
-
-const ScriptBox_ = styled.div`
-    display:none;
-    @media ${props => props.theme.tablet} {
-    font-size: 1.3rem;
-    font-weight: 100;
-    color: #ffffff;
-    margin-top: 2rem;
-    font-style: italic;
-    } 
-`
-
-const BottomBox_ = styled.div`
-
-`
-
-const NameContainer_ = styled.div`
-  display:none;
-  @media ${props => props.theme.tablet} {
-    display: flex;
-    align-items: flex-end;
-  } 
-`
-
-const NameBox_ = styled.div`
-  display:none;
-  @media ${props => props.theme.tablet} {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    font-family: 'Pretendard';
-  } 
-`
-
-const CastBox_ = styled.div`
-  display:none;
-  @media ${props => props.theme.tablet} {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #ffffff;
-    font-family: 'Pretendard';
-    margin-left: 0.5rem;
-  } 
-`
-
-const DetailBox_ = styled.div`
-  display:none;
-  @media ${props => props.theme.tablet} {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #ffffff;
-    margin-top: 2rem;
-  } 
-`
-
 
 function Castingboard() {
     const characters = [
@@ -255,7 +169,7 @@ function Castingboard() {
         nameKR: '소피아',
         cast: '오현지', 
         text: '\n가끔 질문하지 않는 걸 받아들여야 해.\n나아가는 것에 만족해야만 해...\n너무 생각하지 말고.\n',
-        detail: '피에르의 아내.\n사랑하는 피에르의 부탁으로 \n 니콜라와의 동거를 받아들인다.'
+        detail: '피에르의 아내.\n사랑하는 피에르의 부탁으로 니콜라와의 동거를 받아들인다.'
       }
     ]
 

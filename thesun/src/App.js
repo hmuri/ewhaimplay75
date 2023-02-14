@@ -13,6 +13,7 @@ import { useLocation, Route, Routes } from 'react-router-dom';
 
 const Container = styled.div`
   background-color: #172F53;
+  
   @media ${props => props.theme.tablet} {
     height: calc(var(--vh, 1vh) * 100);
     position: relative;
@@ -38,7 +39,7 @@ const RightContainer = styled.div`
     width: 100%;
     height: 100%;
     margin-top: 5.5rem;
-    padding-bottom: 5rem;
+    padding-bottom: ${props => props.isCastingBoard? '0' : '5rem'};
     background-color: #172F53;
   }
 `
@@ -58,7 +59,7 @@ function App({props}) {
     <Container>
       <Navbar location={location.pathname}/>
       <InsideContainer>
-        <RightContainer>
+        <RightContainer isCastingBoard={location.pathname.includes('/casting-board')}>
               <Routes>
                 <Route path="/" element={<Main />}></Route>
                 <Route path="/info-implay/*" element={<Player />}></Route>

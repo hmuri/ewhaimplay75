@@ -8,6 +8,11 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media ${props => props.theme.mobile} {
+    padding-bottom: 5rem;
+    background-color: #172F53;
+  }
 `
 
 const UpperBox = styled.div`
@@ -19,7 +24,7 @@ const UpperBox = styled.div`
   @media ${props => props.theme.mobile} {
     width: 90%;
     flex-direction : column;
-    margin: 5rem 0 2rem;
+    margin: 13rem 0 2rem;
   }
 `
 

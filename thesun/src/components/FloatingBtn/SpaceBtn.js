@@ -11,7 +11,7 @@ const popUp = transPosition => keyframes`
     transform: scale(1);
     opacity:1;
     transform:translate(${transPosition.x},${transPosition.y})
-  }
+  }ㅌㄹㄹ
 `;
 
 const SpaceButton = styled.button`

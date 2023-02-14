@@ -131,7 +131,7 @@ function Navbar() {
             <IconBox>
             <SNSIcon src={instagram} onClick={() => window.open('https://www.instagram.com/ewha_implay/', "_blank")}/>
             <SNSIcon src={twitter} onClick={() => window.open('https://twitter.com/ewha_implay', "_blank")}/>
-            <SNSIcon src={kakaotalk}/>
+            <SNSIcon src={kakaotalk} onClick={() => window.open('https://open.kakao.com/o/sljJW73e', "_blank")}/>
             </IconBox>
             <RightText>상단의 카카오톡 아이콘을 누르면 문의 관련 오픈채팅방으로 연결됩니다.</RightText>
         </RightContainer>

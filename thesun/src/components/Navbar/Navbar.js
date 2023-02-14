@@ -19,10 +19,13 @@ const Container = styled.div`
     top: 0;
     left:0;
 
+    z-index: 100000;
+
     @media ${props => props.theme.tablet} {
         width: 100%;
         height: ${props => props.isDisabled ? '5.5rem' : '9.5rem'};
         background-color: #172F53;
+        
     }
 `
 

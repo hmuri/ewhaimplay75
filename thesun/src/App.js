@@ -12,6 +12,7 @@ import FloatingBtn from './components/FloatingBtn/FloatingBtn.js';
 import { useLocation, Route, Routes } from 'react-router-dom';
 
 const Container = styled.div`
+  background-color: #172F53;
   @media ${props => props.theme.tablet} {
     height: calc(var(--vh, 1vh) * 100);
     position: relative;

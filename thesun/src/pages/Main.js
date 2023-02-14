@@ -9,8 +9,12 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media ${props => props.theme.tablet} {
+        margin-top: 7rem;
+    }
+
     @media ${props => props.theme.mobile} {
-        margin-top: 10rem;
+        margin-top: 11rem;
     }
 `
 

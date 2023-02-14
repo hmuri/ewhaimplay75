@@ -12,6 +12,7 @@ const popUp = keyframes`
     transform: scale(1);
     transform:translate(-50%, 0);
     opacity:1;
+    z-index:1000;
   }
 `;
 
@@ -23,14 +24,20 @@ const FloatBtnWrapper = styled.div`
     position: fixed;
     bottom: 2rem;
     right: 0;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.8rem;
+    height: 3.8rem;
     border-radius: 50%;
     background-color: #fff;
+    background-image: url('/images/icons/icon-click.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 4rem 4rem;
     transform-origin: center center;
     animation: ${popUp} 0.2s both ease-in;
     box-shadow: 3px 3px 10px #091A33;
+    opacity: 1;
   }
+
 `
 
 const FloatButton = styled.div`
@@ -39,6 +46,7 @@ const FloatButton = styled.div`
   border: none;
   outline: none;
   cursor: pointer;
+  z-index: 1000;
 `
 
 function FloatingBtn() {
@@ -62,7 +70,7 @@ function FloatingBtn() {
     },
     {
       'title' : 'form',
-      'url' : 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSexZWV5BX_feGKzQ6924aWsEiSdME3hRu7tjmfN1939eeXe1A/closedform',
+      'url' : 'https://forms.gle/hAG8GidzEqzwxt6G7',
     },
     {
       'title' : 'twitter',

@@ -16,11 +16,19 @@ const MiddleContainer = styled.div`
   display:flex;
   justify-content: center;
   align-items: flex-start;
+  @media ${props => props.theme.tablet} {
+    flex-direction: column;
+  }  
+
 `
 
 const ImageContainer = styled.div`
   display: flex;
-  height: 100%;
+  height: 70%;
+  @media ${props => props.theme.tablet} {
+    height: 70%;
+  } 
+  
 `
 
 const GreyImageContainer = styled.div`
@@ -28,6 +36,9 @@ const GreyImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media ${props => props.theme.tablet} {
+    height: 50%;
+  } 
 `
 
 const NavImage = styled(NavLink)`
@@ -51,20 +62,31 @@ const NavImage = styled(NavLink)`
     -o-filter: grayscale(0%);
     -o-transition: .5s ease-in-out;
   }
+
 `
 
 const GreyImage = styled.img`
   height: 100%;
   object-fit: contain;
   border: solid #ffffff 0.01rem;
+  @media ${props => props.theme.tablet} {
+    height: 100%;
+  } 
 `
 
 const MainImageContainer = styled.div`
+@media ${props => props.theme.tablet} {
+  height: 100%;
+} 
+
 `
 
 const Poster = styled.img`
     height: 27rem;
     border: solid #ffffff 0.01rem;
+    @media ${props => props.theme.tablet} {
+      height: 50%;
+    } 
 `
 
 const RightBox = styled.div`
@@ -74,6 +96,9 @@ const RightBox = styled.div`
     flex-direction : column;
     justify-content: space-between;
     margin-left: 3rem;
+    @media ${props => props.theme.tablet} {
+
+    }  
 `
 
 const ScriptBox = styled.div`
@@ -82,15 +107,24 @@ const ScriptBox = styled.div`
     color: #ffffff;
     margin-top: 2rem;
     font-style: italic;
+    @media ${props => props.theme.tablet} {
+
+    } 
 `
 
 const BottomBox = styled.div`
+@media ${props => props.theme.tablet} {
+
+} 
 
 `
 
 const NameContainer = styled.div`
   display: flex;
   align-items: flex-end;
+  @media ${props => props.theme.tablet} {
+
+  } 
 `
 
 const NameBox = styled.div`
@@ -98,6 +132,9 @@ const NameBox = styled.div`
   font-weight: 700;
   color: #ffffff;
   font-family: 'Pretendard';
+  @media ${props => props.theme.tablet} {
+
+  } 
 `
 
 const CastBox = styled.div`
@@ -106,6 +143,9 @@ const CastBox = styled.div`
   color: #ffffff;
   font-family: 'Pretendard';
   margin-left: 0.5rem;
+  @media ${props => props.theme.tablet} {
+
+  } 
 `
 
 const DetailBox = styled.div`
@@ -113,6 +153,76 @@ const DetailBox = styled.div`
   font-weight: 400;
   color: #ffffff;
   margin-top: 2rem;
+  @media ${props => props.theme.tablet} {
+
+  } 
+`
+const RightBox_ = styled.div`
+@media ${props => props.theme.tablet} {
+  display:flex;
+    width: 25rem;
+    height: 100%;
+    flex-direction : column;
+    justify-content: space-between;
+    margin-left: 3rem;
+    flex-direction: column;
+} 
+    
+    display:none;
+`
+
+const ScriptBox_ = styled.div`
+    display:none;
+    @media ${props => props.theme.tablet} {
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: #ffffff;
+    margin-top: 2rem;
+    font-style: italic;
+    } 
+`
+
+const BottomBox_ = styled.div`
+
+`
+
+const NameContainer_ = styled.div`
+  display:none;
+  @media ${props => props.theme.tablet} {
+    display: flex;
+    align-items: flex-end;
+  } 
+`
+
+const NameBox_ = styled.div`
+  display:none;
+  @media ${props => props.theme.tablet} {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: 'Pretendard';
+  } 
+`
+
+const CastBox_ = styled.div`
+  display:none;
+  @media ${props => props.theme.tablet} {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    font-family: 'Pretendard';
+    margin-left: 0.5rem;
+  } 
+`
+
+const DetailBox_ = styled.div`
+  display:none;
+  @media ${props => props.theme.tablet} {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 2rem;
+  } 
 `
 
 function Castingboard() {

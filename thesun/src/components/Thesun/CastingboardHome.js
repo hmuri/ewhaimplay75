@@ -3,18 +3,22 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const Container = styled.div`
-  width:100%;
-  height: 100%;
+  width:120%;
+  height: 120%;
   background-color: #ffffff;
   display:flex;
   justify-content: center;
   align-items: center;
+
 `
 
 const LayoutContainer = styled.div`
   display:flex;
   justify-content: center;
   align-items: center;
+  @media ${props => props.theme.tablet} {
+    width: 100%;
+  } 
 `
 
 const ImageContainer = styled.div`
@@ -22,6 +26,10 @@ const ImageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media ${props => props.theme.tablet} {
+    height: 11rem;
+    margin: 0rem;
+  } 
 `
 const MiddleContainer = styled(NavLink)`
   position:relative;
@@ -46,6 +54,10 @@ const MiddleContainer = styled(NavLink)`
 const ProfileImage = styled.img`
   height: 18rem;
   margin: 0.5rem;
+  @media ${props => props.theme.tablet} {
+    height: 10rem;
+    margin: 0.3rem;
+  }  
 
 `
 

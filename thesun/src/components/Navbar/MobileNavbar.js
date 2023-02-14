@@ -13,7 +13,6 @@ const MobileDetailContainer = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 2198720;
   }
 `
 

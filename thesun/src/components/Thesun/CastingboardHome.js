@@ -55,6 +55,7 @@ const ProfileImage = styled.img`
   height: 18rem;
   margin: 0.5rem;
   @media ${props => props.theme.tablet} {
+    height: 11rem;
     height: 10rem;
     margin: 0.3rem;
   }  

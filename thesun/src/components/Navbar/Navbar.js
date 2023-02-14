@@ -22,6 +22,8 @@ const Container = styled.div`
 
     z-index: 100000;
 
+    z-index: 100000;
+
     @media ${props => props.theme.tablet} {
         width: 100%;
         height: ${props => props.isDisabled ? '5.5rem' : '9.5rem'};

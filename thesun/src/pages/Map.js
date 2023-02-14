@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Hall from '../assets/images/Map/hall.png';
 import KakaoMap from '../components/Map/KakaoMap.js';

@@ -66,7 +66,7 @@ const MobileLogoImg = styled.img`
 `
 
 const HorizontalLine = styled.div`
-    display: ${props => props.isActive == true ? 'flex' : 'none'};
+    display: ${props => props.isActive === true ? 'flex' : 'none'};
     width: 7.5rem;
     height: 0.1rem;
     background-color: #172F53;

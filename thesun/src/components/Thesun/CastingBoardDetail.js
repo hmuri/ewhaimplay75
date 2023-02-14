@@ -174,7 +174,7 @@ function Castingboard() {
     ]
 
     const {name} = useParams();
-    const isClicked = characters.filter(person => person.nameEN == name);
+    const isClicked = characters.filter(person => person.nameEN === name);
     const others = characters.filter(person => person.nameEN !== name);
 
   return (

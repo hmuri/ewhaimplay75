@@ -39,7 +39,7 @@ const RightContainer = styled.div`
     width: 100%;
     height: auto;
     margin-top: 5.5rem;
-    padding-bottom: ${props => props.isCastingBoard? '0' : '5rem'};
+    padding-bottom: ${props => props.nonPadding? '0' : '5rem'};
     background-color: #172F53;
   }
 
@@ -47,6 +47,9 @@ const RightContainer = styled.div`
     width: 100%;
     height: ${props => props.isMain? 'auto' : '100%'};
     background-color: #172F53;
+
+    margin-top: ${props => props.isCastingBoard? '15rem' : '0'};
+    padding-bottom: ${props => props.isCastingBoard? '5rem' : '0'};
   }
 `
 
@@ -65,7 +68,8 @@ function App({props}) {
     <Container>
       <Navbar location={location.pathname}/>
       <InsideContainer>
-        <RightContainer isMain={location.pathname.includes('/info-implay') || location.pathname==='/info-play'} isCastingBoard={location.pathname.includes('/casting-board') || location.pathname.includes('/director-says')}>
+        <RightContainer isMain={location.pathname.includes('/info-implay') || location.pathname==='/info-play'} nonPadding={location.pathname.includes('/casting-board') || location.pathname.includes('/director-says')}
+        isCastingBoard={location.pathname.includes('/casting-board/pierre') || location.pathname.includes('/casting-board/nicolas') || location.pathname.includes('/casting-board/anne') || location.pathname.includes('/casting-board/sopia')}>
               <Routes>
                 <Route path="/" element={<Main />}></Route>
                 <Route path="/info-implay/*" element={<Player />}></Route>

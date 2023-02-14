@@ -12,7 +12,9 @@ const Container = styled.div`
 
   @media ${props => props.theme.mobile} {
     background: none;
-    margin-top: 5rem;
+    margin-top: 15rem;
+    background-color: #172F53;
+    padding-bottom: 5rem;
   }
 `
 

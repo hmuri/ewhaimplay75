@@ -16,7 +16,9 @@ const Container = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 15rem;
+    margin-top: 17rem;
+    background-color: #172F53;
+    padding-bottom: 5rem;
   }
 `
 

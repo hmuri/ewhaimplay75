@@ -11,8 +11,9 @@ const Container = styled.div`
   align-items: center;
 
   @media ${props => props.theme.mobile} {
-    margin-top: 5rem;
     background-color: #172F53;
+    margin-top: 10rem;
+    padding: 2rem 0;
   }
 `
 

@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: center;
 
   @media ${props => props.theme.mobile} {
-    margin-top: 20rem;
+    margin-top: 30rem;
     padding-bottom: 7rem;
     background-color: #172F53;
   }

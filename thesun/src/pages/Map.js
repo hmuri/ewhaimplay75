@@ -10,6 +10,12 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media ${props => props.theme.mobile} {
+    margin-top: 15rem;
+    padding-bottom: 2rem;
+    background-color: #172F53;
+  }
 `
 
 const InsideBox = styled.div`

@@ -12,6 +12,7 @@ const Container = styled.div`
 
   @media ${props => props.theme.mobile} {
     padding-top: 4rem;
+    padding-bottom: 7rem;
   }
 `
 

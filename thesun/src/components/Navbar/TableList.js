@@ -26,15 +26,15 @@ const TableTitle = styled.div`
     align-items: center;
     font-size: 1.1rem;
     font-weight: 700;
-    color: ${props => props.isActive == true ? '#ffffff' : '#172F53'};
-    background-color: ${props => props.isActive == true ? '#172F53' : '#ffffff'};
+    color: ${props => props.isActive === true ? '#ffffff' : '#172F53'};
+    background-color: ${props => props.isActive === true ? '#172F53' : '#ffffff'};
 
     @media ${props => props.theme.tablet} {
       height: 2.5rem;
       background-color: #ffffff;
       color: #172F53;
       font-size: 1rem;
-      font-weight: ${props => props.isActive == true ? '700' : '400'};
+      font-weight: ${props => props.isActive === true ? '700' : '400'};
     }
 `
 
@@ -42,7 +42,7 @@ const PolygonImg = styled.img`
     display: none;
 
     @media ${props => props.theme.tablet} {
-      display: ${props => props.isActive == true ? 'flex' : 'none'};
+      display: ${props => props.isActive === true ? 'flex' : 'none'};
       width: 0.6rem;
       position: absolute;
       bottom: 0;
@@ -50,7 +50,7 @@ const PolygonImg = styled.img`
 `
 
 const TableInsideConatiner = styled.div`
-    display: ${props => props.isActive == true ? 'flex' : 'none'};
+    display: ${props => props.isActive === true ? 'flex' : 'none'};
     width: 100%;
     background-color: #516AAC;
     flex-direction: column;

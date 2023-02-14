@@ -18,6 +18,7 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     left:0;
+    z-index: 2198720;
 
     @media ${props => props.theme.tablet} {
         width: 100%;

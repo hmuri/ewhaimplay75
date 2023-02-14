@@ -38,7 +38,7 @@ const RightContainer = styled.div`
   @media ${props => props.theme.tablet} {
     width: 100%;
     margin-top: 5.5rem;
-    padding-bottom: 0;
+    padding-bottom: 5rem;
   }
 `
 

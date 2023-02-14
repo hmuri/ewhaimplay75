@@ -62,7 +62,7 @@ function App({props}) {
               <Routes>
                 <Route path="/" element={<Main />}></Route>
                 <Route path="/info-implay/*" element={<Player />}></Route>
-                <Route path="/info-play/*" element={<Thesun />}></Route>
+                <Route path="/info-play/*" element={<Thesun location={location.pathname} />}></Route>
                 <Route path="/info-ticket/*" element={<Ticket />}></Route>
                 <Route path="/info-route" element={<Map />}></Route>
                 <Route path="*" element={<NotFound />}></Route>

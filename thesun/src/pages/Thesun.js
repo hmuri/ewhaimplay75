@@ -17,7 +17,7 @@ const Container = styled.div`
 
   @media ${props => props.theme.tablet} {
     margin-top: 10rem;
-    padding-bottom: 5rem;
+    padding-bottom: ${props => props.isDirectorPage? '0' : '5rem'};
   }
 
   @media ${props => props.theme.mobile} {
@@ -26,10 +26,10 @@ const Container = styled.div`
   }
 `
 
-function Thesun() {
+function Thesun({location}) {
   return (
     <>
-      <Container>
+      <Container isDirectorPage = {location.includes('/director-says') }>
         <Routes>
           <Route path="" element={<Information />}></Route>
           <Route path="/writer" element={<Writer />}></Route>

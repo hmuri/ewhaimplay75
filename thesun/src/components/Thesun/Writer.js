@@ -7,37 +7,40 @@ const Container = styled.div`
   display:flex;
   justify-content: space-evenly;
   align-items: center;
-  @media ${props => props.theme.tablet}{
+
+  @media ${props => props.theme.mobile}{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    }
+  }
 `
 
 const LeftBox = styled.div`
-  width : 30rem;
   white-space: pre-wrap;
   color: #ffffff;
   font-weight: 100;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 200%;
-  @media ${props => props.theme.tablet}{
+
+  @media ${props => props.theme.mobile}{
     display: none;
-    }
-  `
+    font-size: 1rem;
+  }  
+`
+
 const UnderBox_ = styled.div`
   display: none;
-  @media ${props => props.theme.tablet}{
+
+  @media ${props => props.theme.mobile}{
     display: flex;
     width : 90%;
-    height: 5rem;
     color: #ffffff;
     font-weight: 200;
     font-size: 0.8rem;
     line-height: 180%;
     padding-top: 0.8rem;
     padding-bottom: 1.8rem;
-    }
+  }
 `
 
 const RightBox = styled.div`
@@ -45,13 +48,14 @@ const RightBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media ${props => props.theme.tablet}{
-
-    }
 `
 
 const Poster = styled.img`
-  width: 70%;
+  width: 20rem;
+
+  @media ${props => props.theme.mobile}{
+    width: 70%;
+  }  
 `
 
 const NameText = styled.div`

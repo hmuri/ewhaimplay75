@@ -48,7 +48,7 @@ const TitleText = styled.div`
   margin-bottom: 2rem;
 
   @media ${props => props.theme.mobile} {
-    font-size : 1.2rem;
+    font-size : 1.15rem;
   }
 `
 

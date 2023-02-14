@@ -16,7 +16,7 @@ const Container = styled.div`
     justify-content: center;
     padding-bottom: 7rem;
     background-color: #172F53;
-    margin-top: 180%;
+    margin-top: 150%;
   }
 `
 

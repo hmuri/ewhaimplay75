@@ -9,6 +9,15 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background: ${props => `url(${props.imageUri}) no-repeat center right`};
+
+  @media ${props => props.theme.tablet} {
+    margin-top: -1.5rem;
+  }
+
+  @media ${props => props.theme.mobile} {
+    background: none;
+    margin-top: 0;
+  }
 `
 
 const TextBox = styled.div`
@@ -19,26 +28,25 @@ const TextBox = styled.div`
   font-size: 1.2rem;
   color: #ffffff;
   white-space: pre-wrap;
-  @media ${props => props.theme.tablet} {
+
+  @media ${props => props.theme.mobile} {
     display: none;
-  }  
+  }
 `
+
 const TextBox_ = styled.div`
   display: none;
-  @media ${props => props.theme.tablet} {
+
+  @media ${props => props.theme.mobile} {
     display: flex;
-    width: 73%;
     text-align:center;
     color: #ffffff;
     white-space: pre-wrap;
     font-weight: 500;
     line-height: 180%;
     font-size: 0.88rem;
-    padding-top: 3rem;
   }
-  
 `
-
 
 function Director() {
   return (

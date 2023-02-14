@@ -7,22 +7,29 @@ import Director from '../components/Thesun/Director.js';
 import Castingboard from '../components/Thesun/Castingboard.js';
 
 const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: #172F53;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   @media ${props => props.theme.tablet} {
-      padding: 0 1.5rem;
-    }
+  width: 100%;
+  height: 100%;
+  background-color: #172F53;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media ${props => props.theme.tablet} {
+    margin-top: 10rem;
+    padding-bottom: ${props => props.isDirectorPage? '0' : '5rem'};
+  }
+
+  @media ${props => props.theme.mobile} {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
 `
 
-function Thesun() {
+function Thesun({location}) {
   return (
     <>
-      <Container>
+      <Container isDirectorPage = {location.includes('/director-says') }>
         <Routes>
           <Route path="" element={<Information />}></Route>
           <Route path="/writer" element={<Writer />}></Route>

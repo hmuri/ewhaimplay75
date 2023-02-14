@@ -36,8 +36,10 @@ const RightContainer = styled.div`
   
   @media ${props => props.theme.tablet} {
     width: 100%;
+    height: 100%;
     margin-top: 5.5rem;
-    padding-bottom: 0;
+    padding-bottom: 5rem;
+    background-color: #172F53;
   }
 `
 
@@ -60,7 +62,7 @@ function App({props}) {
               <Routes>
                 <Route path="/" element={<Main />}></Route>
                 <Route path="/info-implay/*" element={<Player />}></Route>
-                <Route path="/info-play/*" element={<Thesun />}></Route>
+                <Route path="/info-play/*" element={<Thesun location={location.pathname} />}></Route>
                 <Route path="/info-ticket/*" element={<Ticket />}></Route>
                 <Route path="/info-route" element={<Map />}></Route>
                 <Route path="*" element={<NotFound />}></Route>

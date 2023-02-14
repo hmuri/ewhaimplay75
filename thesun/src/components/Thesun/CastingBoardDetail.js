@@ -40,6 +40,7 @@ const GreyImageContainer = styled.div`
   justify-content: space-between;
   @media ${props => props.theme.tablet} {
     height: 18rem;
+    height: 50%;
   } 
 `
 
@@ -64,8 +65,6 @@ const NavImage = styled(NavLink)`
     -o-filter: grayscale(0%);
     -o-transition: .5s ease-in-out;
   }
-  
-
 `
 
 const GreyImage = styled.img`
@@ -80,8 +79,8 @@ const GreyImage = styled.img`
 const MainImageContainer = styled.div`
   @media ${props => props.theme.tablet} {
     height: 36rem;
-  } 
-
+    height: 100%;
+  }
 `
 
 const Poster = styled.img`
@@ -89,7 +88,7 @@ const Poster = styled.img`
     border: solid #ffffff 0.01rem;
     @media ${props => props.theme.tablet} {
       height: 50%;
-    } 
+    }
 `
 
 const RightBox = styled.div`
@@ -99,8 +98,6 @@ const RightBox = styled.div`
     flex-direction : column;
     justify-content: space-between;
     margin-left: 3rem;
-    @media ${props => props.theme.tablet} {
-    }  
 `
 
 const ScriptBox = styled.div`
@@ -118,18 +115,11 @@ const ScriptBox = styled.div`
 `
 
 const BottomBox = styled.div`
-@media ${props => props.theme.tablet} {
-
-} 
-
 `
 
 const NameContainer = styled.div`
   display: flex;
   align-items: flex-end;
-  @media ${props => props.theme.tablet} {
-
-  } 
 `
 
 const NameBox = styled.div`
@@ -141,7 +131,6 @@ const NameBox = styled.div`
     font-size: 1.4rem;
     font-weight: 500;
     margin-left: 10%
-
   } 
 `
 
@@ -167,7 +156,73 @@ const DetailBox = styled.div`
     color: #ffffff;
     margin-top: 2rem;
     margin-left: 10%;
+  } 
+`
+const RightBox_ = styled.div`
+  display:none;
+  
+  @media ${props => props.theme.tablet} {
+    display:flex;
+      width: 25rem;
+      height: 100%;
+      flex-direction : column;
+      justify-content: space-between;
+      margin-left: 3rem;
+      flex-direction: column;
+  }
+`
 
+const ScriptBox_ = styled.div`
+    display:none;
+    @media ${props => props.theme.tablet} {
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: #ffffff;
+    margin-top: 2rem;
+    font-style: italic;
+    } 
+`
+
+const BottomBox_ = styled.div`
+
+`
+
+const NameContainer_ = styled.div`
+  display:none;
+  @media ${props => props.theme.tablet} {
+    display: flex;
+    align-items: flex-end;
+  } 
+`
+
+const NameBox_ = styled.div`
+  display:none;
+  @media ${props => props.theme.tablet} {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: 'Pretendard';
+  } 
+`
+
+const CastBox_ = styled.div`
+  display:none;
+  @media ${props => props.theme.tablet} {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    font-family: 'Pretendard';
+    margin-left: 0.5rem;
+  } 
+`
+
+const DetailBox_ = styled.div`
+  display:none;
+  @media ${props => props.theme.tablet} {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 2rem;
   } 
 `
 

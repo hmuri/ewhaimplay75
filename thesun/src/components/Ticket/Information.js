@@ -22,11 +22,13 @@ const TitleBox = styled.div`
     white-space: pre-wrap;
     text-align:center;
     line-height: 170%;
+    
 
     @media ${props => props.theme.mobile} {
         font-size: 1.8rem;
     }
 `
+
 
 const MiddleBox = styled.div`
     display:flex;
@@ -102,7 +104,7 @@ const BottomBox = styled.div`
 function Information() {
   return (
     <Container>
-        <TitleBox>2월 17일{'\n'}예매 폼 및 MD 정식 오픈</TitleBox>
+        <TitleBox>*예매폼 바로가기*</TitleBox>
         <MiddleBox>
             <MiddleContainer style={{'alignItems' : 'center'}}>
                 <LeftIMGBOx src={ExampleIMG}/>

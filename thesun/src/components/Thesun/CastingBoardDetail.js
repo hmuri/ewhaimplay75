@@ -27,6 +27,8 @@ const ImageContainer = styled.div`
   height: 70%;
   @media ${props => props.theme.tablet} {
     height: 70%;
+    padding-left: 20%;  
+    padding-top: 2rem; 
   } 
   
 `
@@ -37,7 +39,7 @@ const GreyImageContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   @media ${props => props.theme.tablet} {
-    height: 50%;
+    height: 18rem;
   } 
 `
 
@@ -62,6 +64,7 @@ const NavImage = styled(NavLink)`
     -o-filter: grayscale(0%);
     -o-transition: .5s ease-in-out;
   }
+  
 
 `
 
@@ -75,9 +78,9 @@ const GreyImage = styled.img`
 `
 
 const MainImageContainer = styled.div`
-@media ${props => props.theme.tablet} {
-  height: 100%;
-} 
+  @media ${props => props.theme.tablet} {
+    height: 36rem;
+  } 
 
 `
 
@@ -97,7 +100,6 @@ const RightBox = styled.div`
     justify-content: space-between;
     margin-left: 3rem;
     @media ${props => props.theme.tablet} {
-
     }  
 `
 
@@ -108,7 +110,10 @@ const ScriptBox = styled.div`
     margin-top: 2rem;
     font-style: italic;
     @media ${props => props.theme.tablet} {
-
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: 100;
+      margin-left: 10%;
     } 
 `
 
@@ -133,6 +138,9 @@ const NameBox = styled.div`
   color: #ffffff;
   font-family: 'Pretendard';
   @media ${props => props.theme.tablet} {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-left: 10%
 
   } 
 `
@@ -154,76 +162,15 @@ const DetailBox = styled.div`
   color: #ffffff;
   margin-top: 2rem;
   @media ${props => props.theme.tablet} {
-
-  } 
-`
-const RightBox_ = styled.div`
-@media ${props => props.theme.tablet} {
-  display:flex;
-    width: 25rem;
-    height: 100%;
-    flex-direction : column;
-    justify-content: space-between;
-    margin-left: 3rem;
-    flex-direction: column;
-} 
-    
-    display:none;
-`
-
-const ScriptBox_ = styled.div`
-    display:none;
-    @media ${props => props.theme.tablet} {
-    font-size: 1.3rem;
-    font-weight: 100;
-    color: #ffffff;
-    margin-top: 2rem;
-    font-style: italic;
-    } 
-`
-
-const BottomBox_ = styled.div`
-
-`
-
-const NameContainer_ = styled.div`
-  display:none;
-  @media ${props => props.theme.tablet} {
-    display: flex;
-    align-items: flex-end;
-  } 
-`
-
-const NameBox_ = styled.div`
-  display:none;
-  @media ${props => props.theme.tablet} {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    font-family: 'Pretendard';
-  } 
-`
-
-const CastBox_ = styled.div`
-  display:none;
-  @media ${props => props.theme.tablet} {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #ffffff;
-    font-family: 'Pretendard';
-    margin-left: 0.5rem;
-  } 
-`
-
-const DetailBox_ = styled.div`
-  display:none;
-  @media ${props => props.theme.tablet} {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: #ffffff;
     margin-top: 2rem;
+    margin-left: 10%;
+
   } 
 `
+
 
 function Castingboard() {
     const characters = [
@@ -253,7 +200,7 @@ function Castingboard() {
         nameKR: '소피아',
         cast: '오현지', 
         text: '\n가끔 질문하지 않는 걸 받아들여야 해.\n나아가는 것에 만족해야만 해...\n너무 생각하지 말고.\n',
-        detail: '피에르의 아내.\n사랑하는 피에르의 부탁으로 니콜라와의 동거를 받아들인다.'
+        detail: '피에르의 아내.\n사랑하는 피에르의 부탁으로 \n 니콜라와의 동거를 받아들인다.'
       }
     ]
 

@@ -23,6 +23,7 @@ const UpperBox = styled.div`
   @media ${props => props.theme.mobile} {
     width: 90%;
     flex-direction : column;
+    margin-bottom: 2rem;
   }
 `
 

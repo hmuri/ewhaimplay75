@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import MdBig from '../../assets/images/Ticket/MdBig.png';
+import MdSmall from '../../assets/images/Ticket/MdSmall.png';
+
+
 
 const Container = styled.div`
   width: 100%;
@@ -10,20 +14,50 @@ const Container = styled.div`
   font-weight: 700;
   font-size: 1.5rem;
   color:#ffffff;
+  align-items: center;
+  flex-direction: column;
 
-  @media ${props => props.theme.tablet} {
-    height: 60vh;
-  }
-  
-  @media ${props => props.theme.mobile} {
-    font-size: 1.1rem;
-  }
 `
+const IMGBOx_Big = styled.img`
+    width: 70%;
+    margin-bottom: 1rem;
+    
+    @media ${props => props.theme.mobile} {
+      display:none;
+    }
+`
+const IMGBOx_Small = styled.img`
+    display:none;
+    
+    @media ${props => props.theme.mobile} {
+      display:flex;
+      width: 70%;
+      margin-bottom: 1rem;
+    }
+`
+const TitleBox = styled.div`
+    font-weight: 700;
+    font-size: 2rem;
+    color: #ffffff;
+    white-space: pre-wrap;
+    text-align:center;
+    line-height: 170%;
+    margin-top: 1rem;
+    cursor: pointer;
+
+    @media ${props => props.theme.mobile} {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+`
+
 
 function Goods() {
   return (
     <Container>
-      굿즈는 예매 폼 오픈과 함께 공개됩니다.
+      <TitleBox onClick={() => window.open('https://forms.gle/hAG8GidzEqzwxt6G7', "_blank")}>*예매폼 바로가기*</TitleBox>
+      <IMGBOx_Big src={MdBig}/>
+      <IMGBOx_Small src={MdSmall}/>
     </Container>
   );
 }

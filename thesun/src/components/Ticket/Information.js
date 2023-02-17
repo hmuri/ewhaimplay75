@@ -8,10 +8,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 
   @media ${props => props.theme.mobile} {
     background-color: #172F53;
-    margin-top: 2rem;
   }
 `
 
@@ -22,7 +22,7 @@ const TitleBox = styled.div`
     white-space: pre-wrap;
     text-align:center;
     line-height: 170%;
-    
+    cursor: pointer;
 
     @media ${props => props.theme.mobile} {
         font-size: 1.8rem;
@@ -37,6 +37,8 @@ const MiddleBox = styled.div`
     @media ${props => props.theme.mobile} {
         flex-direction: column;
         margin: 0 0 3rem;
+        justify-content: center;
+        align-items: center;
     }
 `
 
@@ -50,13 +52,17 @@ const MiddleContainer = styled.div`
 
     @media ${props => props.theme.mobile} {
         margin-top : 2rem;
-        width: 100%;
+        width: 90%;
     }
 `
 
 const LeftIMGBOx = styled.img`
     width: 22rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+
+    @media ${props => props.theme.mobile} {
+        width: 100%;
+    }
 `
 
 const LeftTextBox = styled.div`
@@ -105,7 +111,7 @@ const BottomBox = styled.div`
 function Information() {
   return (
     <Container>
-        <TitleBox onClick={() => window.open('https://forms.gle/hAG8GidzEqzwxt6G7', "_blank")}>*예매폼 바로가기*</TitleBox>
+        <TitleBox onClick={() => window.open('https://forms.gle/hAG8GidzEqzwxt6G7', "_blank")}><u>*예매폼 바로가기*</u></TitleBox>
         <MiddleBox>
             <MiddleContainer style={{'alignItems' : 'center'}}>
                 <LeftIMGBOx src={ExampleIMG}/>

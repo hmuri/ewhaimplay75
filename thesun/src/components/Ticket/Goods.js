@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import MdBig from '../../assets/images/Ticket/MdBig.png';
-import MdSmall from '../../assets/images/Ticket/MdSmall.png';
+import MdBig from '../../assets/images/Ticket/MdBig.jpeg';
+import MdSmall from '../../assets/images/Ticket/MdSmall.jpeg';
 
 
 
@@ -31,7 +31,7 @@ const IMGBOx_Small = styled.img`
     
     @media ${props => props.theme.mobile} {
       display:flex;
-      width: 70%;
+      width: 85%;
       margin-bottom: 1rem;
     }
 `
@@ -44,6 +44,7 @@ const TitleBox = styled.div`
     line-height: 170%;
     margin-top: 1rem;
     cursor: pointer;
+    margin-bottom: 1rem;
 
     @media ${props => props.theme.mobile} {
         font-size: 1.8rem;
@@ -55,7 +56,7 @@ const TitleBox = styled.div`
 function Goods() {
   return (
     <Container>
-      <TitleBox onClick={() => window.open('https://forms.gle/hAG8GidzEqzwxt6G7', "_blank")}>*예매폼 바로가기*</TitleBox>
+      <TitleBox onClick={() => window.open('https://forms.gle/hAG8GidzEqzwxt6G7', "_blank")}><u>*예매폼 바로가기*</u></TitleBox>
       <IMGBOx_Big src={MdBig}/>
       <IMGBOx_Small src={MdSmall}/>
     </Container>

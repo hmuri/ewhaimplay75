@@ -136,19 +136,19 @@ function Seats() {
 	const lastSeatList = [
 		{
 			date : '03/09 19:30',
-			numOfSeats : 196
+			numOfSeats : 189
 		},
 		{
 			date : '03/10 19:30',
-			numOfSeats : 196
+			numOfSeats : 185
 		},
 		{
 			date : '03/11 14:00',
-			numOfSeats : 196
+			numOfSeats : 183
 		},
 		{
 			date : '03/11 19:00',
-			numOfSeats : 196
+			numOfSeats : 190
 		}
 	]
 
